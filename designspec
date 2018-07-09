@@ -1,0 +1,34 @@
+This is a interactive toy shell with ability of job control.
+But no any programming features. You can't run scripts on it.
+
+Use \ to escape
+
+Expansion features:
+		  $((1+2))		     3
+		  $(uname -r)		 4.16.8-300.fc28.x86_64
+		  $?          		 <exit status of the last program>
+		  $$  		  		 <pid of the shell itself>
+
+Support subshell, pipeline, background, Sequence
+			 ()		   |		 &			 ;
+
+Builtin Commands：jobs fg bg umask cd
+		jobs
+		fg/bg <job id>
+		umask <an octal number between 0000 and 0777>
+		cd [path] (if path is not specified, go to the home directory)
+
+Forms of fd redirection: [fd]>file, <file,  [fd]>>file, fd>&fd, >&file
+
+Grammar:
+CmdLine = CmdList ENDOFLINE
+CmdList = Pipe
+		| Pipe Delim CmdList
+		| Pipe Delim
+Delim = ; | &
+Pipe = Redirected
+	 | Redirected '|' Pipe
+Redirected = Primary
+		   | Primary [redirection flags]	 	 
+Primary = Exec
+		| (CmdList)

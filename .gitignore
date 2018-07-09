@@ -1,0 +1,8 @@
+*~
+*.o
+sltsh
+sltsh_debug
+demopics/
+GPATH
+GTAGS
+GRTAGS
