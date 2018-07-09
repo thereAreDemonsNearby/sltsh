@@ -33,3 +33,6 @@ a toy shell (no programming feature)
 			   | Primary [redirectflags]
 	Primary = Exec
 			| (CmdList)
+
+## Installation
+make
