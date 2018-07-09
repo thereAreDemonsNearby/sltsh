@@ -17,7 +17,7 @@ a toy shell (no programming feature)
 * cd <path>(no arg to go to home directory)  
 
 ### Redirection: 
-* \>file, <file, fd>file, fd>>file, fd>&fd, >&file
+* \>file, >>file, fd>file, fd>>file, fd>&fd, >&file, <file
 
 ## Grammar:
 
