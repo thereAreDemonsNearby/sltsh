@@ -22,11 +22,11 @@ a toy shell (no programming feature)
 
 ### Expansion:
 * command substitution:  
-  cd /usr/src/kernels/$(uname -r)
+  * cd /usr/src/kernels/$(uname -r)
 * arithmetic expansion:  
-  echo $((3+4*5))
+  * echo $((3+4*5))
 * tilde expansion:  
-  cd ~/bin
+  * cd ~/bin
 
 ## Grammar:
 
